@@ -1,0 +1,55 @@
+container: {type: ColumnPanel}
+components:
+- name: label_1
+  properties: {text: Guest Wifi PSK, align: center, font_size: 30}
+  type: Label
+  layout_properties: {grid_position: 'JFWGRB,JXYRCA'}
+- name: outlined_card_1
+  properties: {role: outlined-card}
+  type: ColumnPanel
+  layout_properties: {grid_position: 'ONHVTZ,CXCSJR'}
+  components:
+  - name: get_current_psk
+    properties: {text: Get Current PSK}
+    type: Button
+    layout_properties: {grid_position: 'HUPKDY,UZDXXZ'}
+    event_bindings: {click: get_current_psk_click}
+- name: outlined_card_2
+  properties: {role: outlined-card}
+  type: ColumnPanel
+  layout_properties: {grid_position: 'YLFVNO,OWKGTM'}
+  components:
+  - name: label_2
+    properties: {text: Password Minimum Length}
+    type: Label
+    layout_properties: {grid_position: 'XAOCKF,ZYQWHJ'}
+  - name: min_len
+    properties: {role: outlined, text: Minimum Length}
+    type: TextBox
+    layout_properties: {grid_position: 'XAOCKF,UEEDDQ'}
+  - name: label_3
+    properties: {text: Password Maximum Length}
+    type: Label
+    layout_properties: {grid_position: 'DZZQIN,MSZMJA'}
+  - name: max_len
+    properties: {role: outlined, text: Maximum Length}
+    type: TextBox
+    layout_properties: {grid_position: 'DZZQIN,JJARRD'}
+  - name: label_4
+    properties: {text: How Many Words in Password}
+    type: Label
+    layout_properties: {grid_position: 'FFBFPZ,MVEOHP'}
+  - name: pass_words
+    properties: {role: outlined, text: 'Number of Words ', underline: true}
+    type: TextBox
+    layout_properties: {grid_position: 'FFBFPZ,IEGORE'}
+  - name: generate_new_psk
+    properties: {text: Generate New PSK}
+    type: Button
+    layout_properties: {grid_position: 'XOBLVJ,YVWFSX'}
+    event_bindings: {click: generate_new_psk_click}
+- name: psk_details
+  properties: {}
+  type: ColumnPanel
+  layout_properties: {grid_position: 'XYZYUY,FIZRMY'}
+is_package: true
