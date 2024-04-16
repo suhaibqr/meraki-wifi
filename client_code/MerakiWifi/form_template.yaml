@@ -19,28 +19,33 @@ components:
   type: ColumnPanel
   layout_properties: {grid_position: 'YLFVNO,OWKGTM'}
   components:
+  - name: label_5
+    properties: {align: center, text: Change PSK, bold: true, italic: true, underline: true,
+      font_size: 19}
+    type: Label
+    layout_properties: {grid_position: 'JLDJGG,QIWVZH'}
   - name: label_2
-    properties: {text: Password Minimum Length}
+    properties: {text: Password Minimum Length (Numeric value > 1)}
     type: Label
     layout_properties: {grid_position: 'XAOCKF,ZYQWHJ'}
   - name: min_len
-    properties: {role: outlined, text: Minimum Length}
+    properties: {role: outlined, text: ''}
     type: TextBox
     layout_properties: {grid_position: 'XAOCKF,UEEDDQ'}
   - name: label_3
-    properties: {text: Password Maximum Length}
+    properties: {text: Password Maximum Length (Numeric Value < 20)}
     type: Label
     layout_properties: {grid_position: 'DZZQIN,MSZMJA'}
   - name: max_len
-    properties: {role: outlined, text: Maximum Length}
+    properties: {role: outlined, text: ''}
     type: TextBox
     layout_properties: {grid_position: 'DZZQIN,JJARRD'}
   - name: label_4
-    properties: {text: How Many Words in Password}
+    properties: {text: How Many Words in Password (Numeric Value < 5)}
     type: Label
     layout_properties: {grid_position: 'FFBFPZ,MVEOHP'}
   - name: pass_words
-    properties: {role: outlined, text: 'Number of Words ', underline: true}
+    properties: {role: outlined, text: '', underline: false}
     type: TextBox
     layout_properties: {grid_position: 'FFBFPZ,IEGORE'}
   - name: generate_new_psk
@@ -52,4 +57,17 @@ components:
   properties: {}
   type: ColumnPanel
   layout_properties: {grid_position: 'XYZYUY,FIZRMY'}
+  components:
+  - name: network_name
+    properties: {text: 'Network Name: TDMDev', align: center, visible: false}
+    type: Label
+    layout_properties: {grid_position: 'VMCDJA,ECWMKQ'}
+  - name: network_password
+    properties: {text: 'Password: ', align: center, visible: false}
+    type: Label
+    layout_properties: {grid_position: 'VRQIYV,XUMRGB'}
+  - name: qr_png
+    properties: {}
+    type: Image
+    layout_properties: {grid_position: 'VNCFEV,PAFPZG'}
 is_package: true
